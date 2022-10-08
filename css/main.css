@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --black: #1B1D1F;
+  --gray: #1B1D1FAA;
+  --orange: #FF6B0A;
+  --white: #FFF;
+  --blue: #005BBB;
+  --light-blue: #C0E2F7;
+}
+
+html, body {
+  height: 100%;
+}
+header {
+  margin: 32px 0 56px 0;
+  display: flex;
+}
+header img {
+  width: 100px;
+  height: 32px;
+}
+header p {
+  font: normal 500 12px/16px 'Montserrat', sans-serif;
+  margin: 0 0 0 16px;
+}
+
+footer, .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+.hero-page {
+  background: url('../assets/img/gus.svg') no-repeat right bottom / auto 100%, var(--light-blue);
+  background: url('../assets/img/gus.svg') no-repeat right bottom / auto 100%, linear-gradient(270deg, #A5DEFF 0%, #FCFEFF 100%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main-container {
+  position: relative;
+  background: hsla(0 0% 100% / .85);
+  padding: 60px 0 62px 56px;
+  max-width: 517px;
+  border-radius: 16px;
+  z-index: 1;
+}
+.main-container h4 { margin-bottom: 16px; }
+.main-container h3 { color: var(--orange); }
+.main-container h3, .main-container p { margin-bottom: 48px; }
+.main-container h1 { margin-bottom: 22px; }
+.main-container p { margin-right: 77px; }
+.main-container button, .modal-window input[type=submit] {
+  background: var(--orange);
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.facts-page {
+  background: var(--white);
+  margin: 52px 0 72px 0;
+}
+.facts-page .facts-header { text-align: center; margin-bottom: 24px; }
+.facts-page .facts-header .subaccent { margin-bottom: 16px }
+.facts-page .facts-cards {
+  display: flex;
+  flex-direction: row;
+}
+.facts-page .facts-cards .card { flex: 1; }
+.facts-page .facts-cards h3 {
+  margin: 12px 0 32px 0;
+}
+
+footer {
+  background: var(--light-blue);
+  background: linear-gradient(270deg, #C1E8FF 0%, #FCFEFF 100%);
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 72px;
+  text-align: center;
+}
+footer > .wrapper {
+  margin: 72px 148px;
+}
+
+.modal-bgd {
+  background: var(--gray);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all .25s ease-out;
+  z-index: 2;
+
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-window {
+  position: relative;
+  background: var(--white);
+  padding: 32px 93px 60px 93px;
+  max-width: 573px;
+  max-height: 524px;
+  text-align: center;
+  border-radius: 10px;
+}
+.modal-window > .close-btn {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity .25s ease-out;
+}
+.modal-window > .close-btn:before, .modal-window > .close-btn:after {
+  position: absolute;
+  left: 12px;
+  content: ' ';
+  height: 24px;
+  width: 2px;
+  background-color: var(--black);
+}
+.modal-window > .close-btn:before { transform: rotate(45deg); }
+.modal-window > .close-btn:after { transform: rotate(-45deg); }
+.modal-window > .close-btn:hover { opacity: 1; }
+.modal-window img:not(.gus-anim) { margin-bottom: 32px; }
+.modal-window h3 { margin-bottom: 12px; }
+.modal-window-field:first-of-type { margin: 24px 0 16px 0; }
+.modal-window-field:last-of-type { margin-bottom: 40px; }
+.modal-window-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-window-field > input {
+  width: 100%;
+  line-height: 48px;
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  padding: .2em .5em;
+  box-sizing: border-box;
+}
+.modal-window-field > label { margin-bottom: 8px; }
+
+.modal-active {
+  opacity: 1;
+  pointer-events: all;
+}
+.gus-anim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  pointer-events: none;
+}
+
+input:disabled {
+  cursor: wait !important;
+}
+
+h1, .accent {
+  font: normal 600 64px/72px 'Montserrat', sans-serif;
+  color: var(--black);
+}
+h2, .subaccent {
+  font: normal 600 48px/100px 'Montserrat', sans-serif;
+  color: var(--black);
+}
+h3, .header {
+  font: normal 600 24px/24px 'Montserrat', sans-serif;
+  color: var(--black);
+}
+h4, .subheader {
+  font: normal 600 16px/24px 'Montserrat', sans-serif;
+  color: var(--black);
+}
+p, .main_body {
+  font: normal 400 16px/24px 'Montserrat', sans-serif;
+  color: var(--black);
+}
